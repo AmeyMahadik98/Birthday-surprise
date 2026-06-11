@@ -77,7 +77,32 @@ img{
 .final-photo{
     width:300px;
 }
+.loader-container{
+    width:100%;
+    max-width:400px;
+    height:25px;
+    background:#eee;
+    border-radius:20px;
+    overflow:hidden;
+    margin:20px auto;
+}
 
+.loader-bar{
+    height:100%;
+    width:0%;
+    background:#ff4d6d;
+    animation:loading 3s forwards;
+}
+
+@keyframes loading{
+    from{
+        width:0%;
+    }
+    to{
+        width:100%;
+    }
+}
+    
 #confetti{
     font-size:50px;
     display:none;
@@ -106,7 +131,10 @@ Run Future Simulation
 <div class="card">
 <h1>🔮 Future Simulation</h1>
 <p>Running simulation...</p>
-<p>██████████ 100%</p>
+<div class="loader-container">
+    <div class="loader-bar"></div>
+</div>
+<p id="loadingText">Running simulation...</p>
 <br>
 <p>Dakshu Age: 27</p>
 <p>Amuddii Age: 28</p>
@@ -170,8 +198,8 @@ Show Evidence
 <div class="timeline">
     
 <p>💐 October 2025 - We met each other </p>
-<p>😘 October to Dec 2025 - We started understanding each other and loving caring each other </p>
-<p>🤣 Jan to April 2026 - We crated out moments, our memories, our laughter 🤣 </p>
+<p>😘 October to Dec 2025 - We started understanding each other, caring for each other, and slowly falling in love ❤️ </p>
+<p>🤣 Jan to April 2026 - We created our moments, our memories, our laughter 🤣 </p>
 <p>🎂 15 April 2026 - My Dakshu's birthday came and We became the same age 🥳🥳🥳</p>
 <p>💍 26 April 2026 - We got engaged</p>
 <p>😂 May 2026 - More memories, more laughter, more us</p>
