@@ -293,53 +293,46 @@ Your Slightly Older Fiancé ❤️
 function nextScreen(num){
 
 document.querySelectorAll(".screen")
-.forEach(s=>s.classList.remove("active"));
-
-document.getElementById("screen"+num)
+.forEach(s => s.classList.remove("active"));
+document.getElementById("screen" + num)
 .classList.add("active");
 
-}
-
-function playMusic(){
-document.getElementById("bgmusic").play();
 }
 
 function finish(){
 
 document.getElementById("confetti").style.display="block";
-
 document.getElementById("ending").style.display="block";
 
 }
+
 function startSimulation(){
 
 let text = document.getElementById("loadingText");
-
 setTimeout(()=>{
     text.innerHTML = "Checking age records...";
 },1000);
-
 setTimeout(()=>{
     text.innerHTML = "Contacting time department...";
 },2000);
-
 setTimeout(()=>{
     text.innerHTML = "Simulation complete!";
 },3000);
 
+}
+
 function showEvidence(){
 
 let music = document.getElementById("bgmusic");
-
-music.play().then(() => {
+music.play()
+.then(()=>{
     nextScreen(6);
-}).catch(() => {
+})
+.catch((err)=>{
+    console.log(err);
     nextScreen(6);
 });
 
-}    
-
-    
 }
     
 </script>
