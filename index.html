@@ -141,7 +141,7 @@ Run Future Simulation
 <div class="loader-container">
     <div class="loader-bar"></div>
 </div>
-<p id="loadingText">Running simulation...</p>
+<p id="loadingText">Initializing...</p>
 <br>
 <p>Dakshu Age: 27</p>
 <p>Amuddii Age: 28</p>
@@ -311,7 +311,24 @@ document.getElementById("confetti").style.display="block";
 document.getElementById("ending").style.display="block";
 
 }
+function startSimulation(){
 
+let text = document.getElementById("loadingText");
+
+setTimeout(()=>{
+    text.innerHTML = "Checking age records...";
+},1000);
+
+setTimeout(()=>{
+    text.innerHTML = "Contacting time department...";
+},2000);
+
+setTimeout(()=>{
+    text.innerHTML = "Simulation complete!";
+},3000);
+
+}
+    
 </script>
 </body>
 </html>
