@@ -104,9 +104,16 @@ img{
 }
     
 #confetti{
-    font-size:50px;
-    display:none;
-    margin-top:20px;
+    animation:bounce 1s infinite alternate;
+}
+
+@keyframes bounce{
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform:translateY(-15px);
+    }
 }
 </style>
 </head>
@@ -257,7 +264,7 @@ You ❤️
 Accept AmeyOS v28.0
 </button>
 <div id="confetti">
-🎉🎉🎉
+🎉 ❤️ 🎊 ❤️ 🎉 ❤️ 🎊 ❤️ 🎉
 </div>
 <div id="ending" style="display:none;margin-top:20px;">
 <h2>Installation Successful ✅</h2>
