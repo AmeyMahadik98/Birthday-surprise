@@ -118,9 +118,15 @@ img{
     display:flex;
     gap:12px;
     overflow-x:auto;
-    padding:10px 0;
-    margin:10px 0 25px 0;
+    padding:10px 0 25px 0;
+
+    /* Smooth iPhone scrolling */
     -webkit-overflow-scrolling:touch;
+
+    /* Snap effect */
+    scroll-snap-type:x mandatory;
+
+    /* Hide scrollbar */
     scrollbar-width:none;
 }
 
@@ -129,9 +135,11 @@ img{
 }
 
 .memory-row img{
-    flex:0 0 auto;
-    width:180px;
+    flex:0 0 85%;
+    width:85%;
+    max-width:none;
     border-radius:15px;
+    scroll-snap-align:center;
 }
 #confetti{
     animation:bounce 1s infinite alternate;
