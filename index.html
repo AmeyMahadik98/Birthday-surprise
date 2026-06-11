@@ -103,6 +103,17 @@ img{
     }
 }
     
+.fade-item{
+    opacity:0;
+    transform:translateY(20px);
+    transition:all 1.5s ease;
+}
+
+.fade-item.show{
+    opacity:1;
+    transform:translateY(0);
+}
+    
 #confetti{
     animation:bounce 1s infinite alternate;
 }
@@ -143,11 +154,11 @@ Run Future Simulation
 </div>
 <p id="loadingText">Initializing...</p>
 <br>
-<p>Dakshu Age: 27</p>
-<p>Amuddii Age: 28</p>
-<p>
-❌ Same Age Status Expired
-</p>
+<div id="simulationResult" style="display:none;">
+    <p>Dakshu Age: 27</p>
+    <p>Amuddii Age: 28</p>
+    <p>❌ Same Age Status Expired</p>
+</div>
 <button onclick="nextScreen(3)">
 PANIC
 </button>
@@ -217,7 +228,7 @@ Show Evidence
 <img src="IMG_3821.jpeg">
 <img src="IMG_4522.jpeg">
 <br>
-<button onclick="nextScreen(7)">
+<button onclick="startFinalSequence()">
 Open Final Report
 </button>
 </div>
@@ -225,41 +236,37 @@ Open Final Report
 <!-- Screen 7 -->
 <div class="screen" id="screen7">
 <div class="card">
-<img class="final-photo" src="IMG_3778.jpeg">
-<h1>❤️ Final Report ❤️</h1>
-<p>
-27 wasn't my favourite year because of work.
-</p>
-<p>
-It wasn't my favourite year because of the places I visited.
-</p>
-<p>
-It wasn't even my favourite year because we shared the same age.
-</p>
+<img class="final-photo fade-item" id="finalPhoto" src="IMG_3778.jpeg">
+<h1 class="fade-item" id="title1">❤️ Final Report ❤️</h1>
+<div class="fade-item" id="story1">
+
+<p>27 wasn't my favourite year because of work.</p>
+
+<p>It wasn't my favourite year because of the places I visited.</p>
+
+<p>It wasn't even my favourite year because we shared the same age.</p>
+
 <br>
+
 <h2>
 It became my favourite year because it was the year I found you.
 </h2>
+
+<p>The year I met my future wife.</p>
+
+<p>The year we got engaged.</p>
+
+<p>The year I started imagining every birthday, holiday and adventure with you beside me.</p>
+
 <br>
-<p>
-The year I met my future wife.
-</p>
-<p>
-The year we got engaged.
-</p>
-<p>
-The year I started imagining every birthday, holiday and adventure with you beside me.
-</p>
-<br>
-<p>
-Everyone thinks tomorrow is about me turning 28.
-</p>
-<p>
-Before 27 ends, I wanted to celebrate the best thing that happened during it.
-</p>
-<h2>
-You ❤️
-</h2>
+
+<p>Everyone thinks tomorrow is about me turning 28.</p>
+
+<p>Before 27 ends, I wanted to celebrate the best thing that happened during it.</p>
+
+<h2>You ❤️</h2>
+
+</div>
 <button onclick="finish()">
 Accept AmeyOS v28.0
 </button>
@@ -308,16 +315,22 @@ document.getElementById("ending").style.display="block";
 
 function startSimulation(){
 
-let text = document.getElementById("loadingText");
-setTimeout(()=>{
-    text.innerHTML = "Checking age records...";
-},1000);
-setTimeout(()=>{
-    text.innerHTML = "Contacting time department...";
-},2000);
-setTimeout(()=>{
-    text.innerHTML = "Simulation complete!";
-},3000);
+    let text = document.getElementById("loadingText");
+
+    document.getElementById("simulationResult").style.display = "none";
+
+    setTimeout(()=>{
+        text.innerHTML = "Checking age records...";
+    },1000);
+
+    setTimeout(()=>{
+        text.innerHTML = "Contacting time department...";
+    },2000);
+
+    setTimeout(()=>{
+        text.innerHTML = "Simulation complete!";
+        document.getElementById("simulationResult").style.display = "block";
+    },3000);
 
 }
 
@@ -334,6 +347,25 @@ music.play()
 });
 
 }
+    
+function startFinalSequence(){
+
+    nextScreen(7);
+
+    setTimeout(()=>{
+        document.getElementById("finalPhoto").classList.add("show");
+    },500);
+
+    setTimeout(()=>{
+        document.getElementById("title1").classList.add("show");
+    },1800);
+
+    setTimeout(()=>{
+        document.getElementById("story1").classList.add("show");
+    },3300);
+
+}
+    
     
 </script>
 </body>
