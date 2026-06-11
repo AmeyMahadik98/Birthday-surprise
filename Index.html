@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best Part of 27 ❤️</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fff7f8;
+    color:#333;
+    text-align:center;
+}
+
+.screen{
+    min-height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:30px;
+}
+
+.active{
+    display:flex;
+}
+
+.card{
+    background:white;
+    max-width:800px;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#ff4d6d;
+    margin-bottom:20px;
+}
+
+p{
+    line-height:1.8;
+    margin:10px 0;
+}
+
+button{
+    margin-top:25px;
+    padding:14px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+img{
+    width:250px;
+    border-radius:15px;
+    margin:10px;
+}
+
+.timeline{
+    text-align:left;
+}
+
+.final-photo{
+    width:300px;
+}
+
+#confetti{
+    font-size:50px;
+    display:none;
+    margin-top:20px;
+}
+</style>
+</head>
+<body>
+<!-- Screen 1 -->
+<div class="screen active" id="screen1">
+<div class="card">
+<h1>🚨 Relationship Age Audit 🚨</h1>
+<p>Future Wife Age: 27 ✅</p>
+<p>Future Husband Age: 27 ✅</p>
+<p><b>Same Age Status: ACTIVE</b></p>
+<p>
+This status will expire shortly...
+</p>
+<button onclick="nextScreen(2)">
+Run Future Simulation
+</button>
+</div>
+</div>
+<!-- Screen 2 -->
+<div class="screen" id="screen2">
+<div class="card">
+<h1>🔮 Future Simulation</h1>
+<p>Running simulation...</p>
+<p>██████████ 100%</p>
+<br>
+<p>Future Wife Age: 27</p>
+<p>Future Husband Age: 28</p>
+<p>
+❌ Same Age Status Expired
+</p>
+<button onclick="nextScreen(3)">
+PANIC
+</button>
+</div>
+</div>
+<!-- Screen 3 -->
+<div class="screen" id="screen3">
+<div class="card">
+<h1>🚨 Emergency Response</h1>
+<p>Contacting Scientists...</p>
+<p>Scientists: "This is normal."</p>
+<br>
+<p>Contacting Time Department...</p>
+<p>Time Department: "We warned him."</p>
+<br>
+<p>Contacting Future Wife...</p>
+<p>Future Wife: "I saw this coming."</p>
+<button onclick="nextScreen(4)">
+Accept Fate
+</button>
+</div>
+</div>
+<!-- Screen 4 -->
+<div class="screen" id="screen4">
+<div class="card">
+<h1>💻 AmeyOS v28.0</h1>
+<p>Software Update Ready</p>
+<br>
+<p>+1 Age</p>
+<p>Wedding Planning Module Installed 💍</p>
+<p>Dad Joke Engine Updated 😅</p>
+<p>Love For Future Wife: No Changes Detected ❤️</p>
+<button onclick="nextScreen(5)">
+Install Update
+</button>
+</div>
+</div>
+<!-- Screen 5 -->
+<div class="screen" id="screen5">
+<div class="card">
+<h1>❤️ Plot Twist</h1>
+<img src="photo1.jpg">
+<p>
+Maybe turning 28 isn't the most important thing that happened this year...
+</p>
+<button onclick="playMusic();nextScreen(6)">
+Show Evidence
+</button>
+</div>
+</div>
+<!-- Screen 6 -->
+<div class="screen" id="screen6">
+<div class="card">
+<h1>📖 Timeline Of The Best Year</h1>
+<div class="timeline">
+<p>❤️ April 2026 - You turned 27</p>
+<p>💍 26 April 2026 - We got engaged</p>
+<p>😂 May 2026 - More laughs, more memories</p>
+<p>👶 June 2026 - Final day as age twins</p>
+<p>❤️ Forever - Growing old together</p>
+</div>
+<br>
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<br>
+<button onclick="nextScreen(7)">
+Open Final Report
+</button>
+</div>
+</div>
+<!-- Screen 7 -->
+<div class="screen" id="screen7">
+<div class="card">
+<img class="final-photo" src="photo4.jpg">
+<h1>❤️ Final Report ❤️</h1>
+<p>
+27 wasn't my favourite year because of work.
+</p>
+<p>
+It wasn't my favourite year because of the places I visited.
+</p>
+<p>
+It wasn't even my favourite year because we shared the same age.
+</p>
+<br>
+<h2>
+It became my favourite year because it was the year I found you.
+</h2>
+<br>
+<p>
+The year I met my future wife.
+</p>
+<p>
+The year we got engaged.
+</p>
+<p>
+The year I started imagining every birthday, holiday and adventure with you beside me.
+</p>
+<br>
+<p>
+Everyone thinks tomorrow is about me turning 28.
+</p>
+<p>
+Before 27 ends, I wanted to celebrate the best thing that happened during it.
+</p>
+<h2>
+You ❤️
+</h2>
+<button onclick="finish()">
+Accept AmeyOS v28.0
+</button>
+<div id="confetti">
+🎉🎉🎉
+</div>
+<div id="ending" style="display:none;margin-top:20px;">
+<h2>Installation Successful ✅</h2>
+<p>Version 28.0 Installed</p>
+<p>Still loves you ❤️</p>
+<p>Still misses you ❤️</p>
+<p>Still laughs at your jokes ❤️</p>
+<p>Still wants to grow old with you ❤️</p>
+</div>
+</div>
+</div>
+<audio id="bgmusic" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+<script>
+
+function nextScreen(num){
+
+document.querySelectorAll(".screen")
+.forEach(s=>s.classList.remove("active"));
+
+document.getElementById("screen"+num)
+.classList.add("active");
+
+}
+
+function playMusic(){
+document.getElementById("bgmusic").play();
+}
+
+function finish(){
+
+document.getElementById("confetti").style.display="block";
+
+document.getElementById("ending").style.display="block";
+
+}
+
+</script>
