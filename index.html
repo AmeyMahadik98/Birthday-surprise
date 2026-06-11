@@ -128,7 +128,7 @@ img{
 <p>
 This status will expire shortly...
 </p>
-<button onclick="nextScreen(2)">
+<button onclick="startSimulation();nextScreen(2)">
 Run Future Simulation
 </button>
 </div>
@@ -193,7 +193,7 @@ Install Update
 <p>
 Maybe turning 28 isn't the most important thing that happened this year...
 </p>
-<button onclick="playMusic();nextScreen(6)">
+<button onclick="showEvidence()">
 Show Evidence
 </button>
 </div>
@@ -327,6 +327,19 @@ setTimeout(()=>{
     text.innerHTML = "Simulation complete!";
 },3000);
 
+function showEvidence(){
+
+let music = document.getElementById("bgmusic");
+
+music.play().then(() => {
+    nextScreen(6);
+}).catch(() => {
+    nextScreen(6);
+});
+
+}    
+
+    
 }
     
 </script>
