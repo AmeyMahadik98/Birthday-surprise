@@ -115,26 +115,24 @@ img{
 }
 
 .memory-row{
-
     display:flex;
+    gap:12px;
+    overflow-x:auto;
+    padding:10px 0;
+    margin:10px 0 25px 0;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+}
 
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin-bottom:25px;
-
+.memory-row::-webkit-scrollbar{
+    display:none;
 }
 
 .memory-row img{
-
-    width:160px;
-
-    border-radius:12px;
-
-}   
+    flex:0 0 auto;
+    width:180px;
+    border-radius:15px;
+}
 #confetti{
     animation:bounce 1s infinite alternate;
 }
