@@ -159,7 +159,7 @@ Run Future Simulation
     <p>Amuddii Age: 28</p>
     <p>❌ Same Age Status Expired</p>
 </div>
-<button onclick="nextScreen(3)">
+<button id="panicBtn" onclick="nextScreen(3)" style="display:none;">
 PANIC
 </button>
 </div>
@@ -318,6 +318,7 @@ function startSimulation(){
     let text = document.getElementById("loadingText");
 
     document.getElementById("simulationResult").style.display = "none";
+    document.getElementById("panicBtn").style.display = "none";
 
     setTimeout(()=>{
         text.innerHTML = "Checking age records...";
@@ -330,6 +331,7 @@ function startSimulation(){
     setTimeout(()=>{
         text.innerHTML = "Simulation complete!";
         document.getElementById("simulationResult").style.display = "block";
+        document.getElementById("panicBtn").style.display = "inline-block";
     },3000);
 
 }
